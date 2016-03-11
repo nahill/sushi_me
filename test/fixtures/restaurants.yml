@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone: MyString
+  fax: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  ayce: false
+  description: MyString
+  websiteurl: MyString
+  menuurl: MyString
+  rating: 9.99
+  hour_open: MyString
+  hour_mon_open: 2015-12-24 07:29:15
+  hour_mon_close: 2015-12-24 07:29:15
+  hour_tue_open: 2015-12-24 07:29:15
+  hour_tue_close: 2015-12-24 07:29:15
+  hour_wed_open: 2015-12-24 07:29:15
+  hour_wed_close: 2015-12-24 07:29:15
+  hour_thu_open: 2015-12-24 07:29:15
+  hour_thu_close: 2015-12-24 07:29:15
+  hour_fri_open: 2015-12-24 07:29:15
+  hour_fri_close: 2015-12-24 07:29:15
+  hour_sat_open: 2015-12-24 07:29:15
+  hour_sat_close: 2015-12-24 07:29:15
+  hour_sun_open: 2015-12-24 07:29:15
+  hour_sun_close: 2015-12-24 07:29:15
+  happy_hour: 2015-12-24 07:29:15
+  happy_hour_day: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  fax: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  ayce: false
+  description: MyString
+  websiteurl: MyString
+  menuurl: MyString
+  rating: 9.99
+  hour_open: MyString
+  hour_mon_open: 2015-12-24 07:29:15
+  hour_mon_close: 2015-12-24 07:29:15
+  hour_tue_open: 2015-12-24 07:29:15
+  hour_tue_close: 2015-12-24 07:29:15
+  hour_wed_open: 2015-12-24 07:29:15
+  hour_wed_close: 2015-12-24 07:29:15
+  hour_thu_open: 2015-12-24 07:29:15
+  hour_thu_close: 2015-12-24 07:29:15
+  hour_fri_open: 2015-12-24 07:29:15
+  hour_fri_close: 2015-12-24 07:29:15
+  hour_sat_open: 2015-12-24 07:29:15
+  hour_sat_close: 2015-12-24 07:29:15
+  hour_sun_open: 2015-12-24 07:29:15
+  hour_sun_close: 2015-12-24 07:29:15
+  happy_hour: 2015-12-24 07:29:15
+  happy_hour_day: MyString

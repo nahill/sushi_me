@@ -1,0 +1,238 @@
+<%= form_for @restaurant, :html => { :class => "form-horizontal restaurant", :multipart => true } do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :phone, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:phone) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fax, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :fax, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:fax) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :city, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :city, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:city) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :state, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :state, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:state) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :zip, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :zip, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:zip) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ayce, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ayce, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ayce) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :description, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:description) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :websiteurl, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :websiteurl, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:websiteurl) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :menuurl, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :menuurl, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:menuurl) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rating, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rating, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rating) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_mon_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_mon_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_mon_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_mon_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_mon_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_mon_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_tue_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_tue_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_tue_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_tue_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_tue_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_tue_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_wed_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_wed_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_wed_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_wed_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_wed_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_wed_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_thu_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_thu_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_thu_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_thu_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_thu_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_thu_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_fri_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_fri_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_fri_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_fri_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_fri_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_fri_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_sat_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_sat_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_sat_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_sat_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_sat_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_sat_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_sun_open, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_sun_open, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_sun_open) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour_sun_close, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hour_sun_close, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hour_sun_close) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :happy_hour, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :happy_hour, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:happy_hour) %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :happy_hour_day, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :happy_hour_day, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:happy_hour_day) %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :address, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :address, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:address) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                restaurants_path, :class => 'btn btn-default' %>
+    </div>
+    
+     <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.file_field :avatar,  :class => 'form-control' %>
+    </div>
+    
+  </div>
+
+<% end %>

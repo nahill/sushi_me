@@ -1,0 +1,118 @@
+<div class="page-header">
+        <h1>Sushi Me</h1>
+    </div>
+    
+
+<div class="container rest-profile">
+    
+    <div class="row">
+        <div class="col-xs-3">
+            <%= link_to "Back to Results", restaurants_path, :class => 'btn btn-primary' %>
+            <!-- <button class="btn btn-primary">Back to Results</button> --> <%= @restaurant.name %>
+            <br>
+            Rating: <%= @restaurant.rating %>
+            <br>
+            <div class="pic-box", boarder:0 >
+            <%= image_tag(@restaurant.avatar.url(:medium)) %>
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <div class="info-div">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Website: <%= @restaurant.websiteurl %> <br>
+                        Menu: <%= @restaurant.menuurl %> <br>
+                        
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        Happy-Hour: <%= @restaurant.happy_hour %><br>
+                        Hours: <!-- GET THE HOURS RESTAURANT IS OPEN TODAY -->
+                        
+                        
+                    </div>
+                </div><!-- ========ROW ======= -->
+            </div><!-- ==========INFO DIV =========-->
+            
+            <div class="map-div">
+               <h3>Map Goes Here</h3>
+            </div>
+            
+        </div><!-- ========== COL =========-->
+        <div class="col-xs-1"></div>
+        
+    </div><!-- ===========ROW=========== -->
+    <%- model_class = Restaurant -%>
+    <div class="page-header">
+      <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+    </div>
+    
+    <!--
+    <dl class="dl-horizontal">
+      <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+      <dd><%= @restaurant.name %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
+      <dd><%= @restaurant.phone %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:fax) %>:</strong></dt>
+      <dd><%= @restaurant.fax %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+      <dd><%= @restaurant.city %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
+      <dd><%= @restaurant.state %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
+      <dd><%= @restaurant.zip %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:ayce) %>:</strong></dt>
+      <dd><%= @restaurant.ayce %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+      <dd><%= @restaurant.description %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:websiteurl) %>:</strong></dt>
+      <dd><%= @restaurant.websiteurl %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:menuurl) %>:</strong></dt>
+      <dd><%= @restaurant.menuurl %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:rating) %>:</strong></dt>
+      <dd><%= @restaurant.rating %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_mon_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_mon_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_mon_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_mon_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_tue_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_tue_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_tue_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_tue_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_wed_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_wed_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_wed_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_wed_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_thu_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_thu_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_thu_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_thu_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_fri_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_fri_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_fri_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_fri_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_sat_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_sat_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_sat_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_sat_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_sun_open) %>:</strong></dt>
+      <dd><%= @restaurant.hour_sun_open %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:hour_sun_close) %>:</strong></dt>
+      <dd><%= @restaurant.hour_sun_close %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:happy_hour) %>:</strong></dt>
+      <dd><%= @restaurant.happy_hour %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:happy_hour_day) %>:</strong></dt>
+      <dd><%= @restaurant.happy_hour_day %></dd>
+    </dl>
+    -->
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+                  restaurants_path, :class => 'btn btn-default'  %>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                  edit_restaurant_path(@restaurant), :class => 'btn btn-default' %>
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                  restaurant_path(@restaurant),
+                  :method => 'delete',
+                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                  :class => 'btn btn-danger' %>
